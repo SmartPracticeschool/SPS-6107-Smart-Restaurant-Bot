@@ -1,0 +1,1177 @@
+{
+  "intents": [
+    {
+      "intent": "enquiry",
+      "examples": [
+        {
+          "text": "offers"
+        }
+      ],
+      "description": "any queries"
+    },
+    {
+      "intent": "Greetings",
+      "examples": [
+        {
+          "text": "good afternoon"
+        },
+        {
+          "text": "good morning"
+        },
+        {
+          "text": "gud evening"
+        },
+        {
+          "text": "gud mroning"
+        },
+        {
+          "text": "hello"
+        }
+      ],
+      "description": "hi"
+    },
+    {
+      "intent": "help",
+      "examples": [
+        {
+          "text": "help"
+        }
+      ],
+      "description": "help you"
+    },
+    {
+      "intent": "number",
+      "examples": [],
+      "description": "quantity of food"
+    },
+    {
+      "intent": "order",
+      "examples": [
+        {
+          "text": "can you please place a order"
+        }
+      ],
+      "description": "PLACE A ORDER"
+    },
+    {
+      "intent": "payment",
+      "examples": [],
+      "description": "any payment mode"
+    }
+  ],
+  "entities": [
+    {
+      "entity": "email",
+      "values": [
+        {
+          "type": "patterns",
+          "value": "email",
+          "patterns": [
+            "[a-z0-9._%+-]+@[a-z0-9.-]+\\.[a-z]{2,}$"
+          ]
+        }
+      ],
+      "fuzzy_match": true
+    },
+    {
+      "entity": "enquiry",
+      "values": [
+        {
+          "type": "synonyms",
+          "value": "menu",
+          "synonyms": [
+            "menus"
+          ]
+        },
+        {
+          "type": "synonyms",
+          "value": "offers",
+          "synonyms": [
+            "coupons",
+            "deals",
+            "discounts",
+            "presents",
+            "rebates"
+          ]
+        },
+        {
+          "type": "synonyms",
+          "value": "reservation",
+          "synonyms": []
+        },
+        {
+          "type": "synonyms",
+          "value": "special items",
+          "synonyms": [
+            "additional",
+            "particular",
+            "special",
+            "specially",
+            "supplementary",
+            "vip"
+          ]
+        }
+      ],
+      "fuzzy_match": true
+    },
+    {
+      "entity": "greetings",
+      "values": [
+        {
+          "type": "synonyms",
+          "value": "good afternoon",
+          "synonyms": [
+            "ga",
+            "gud aft",
+            "gud afternoon"
+          ]
+        },
+        {
+          "type": "synonyms",
+          "value": "good evening",
+          "synonyms": [
+            "ge",
+            "gud eve",
+            "gud evening"
+          ]
+        },
+        {
+          "type": "synonyms",
+          "value": "good morning",
+          "synonyms": [
+            "gm",
+            "gud morns",
+            "gumorning",
+            "gumornz"
+          ]
+        }
+      ],
+      "fuzzy_match": true
+    },
+    {
+      "entity": "help",
+      "values": [
+        {
+          "type": "synonyms",
+          "value": "help",
+          "synonyms": []
+        }
+      ],
+      "fuzzy_match": true
+    },
+    {
+      "entity": "items",
+      "values": [
+        {
+          "type": "synonyms",
+          "value": "biryani",
+          "synonyms": []
+        },
+        {
+          "type": "synonyms",
+          "value": "butter chicken",
+          "synonyms": []
+        },
+        {
+          "type": "synonyms",
+          "value": "chicken biryani",
+          "synonyms": [
+            "mutton biryani"
+          ]
+        },
+        {
+          "type": "synonyms",
+          "value": "chilly fish",
+          "synonyms": []
+        },
+        {
+          "type": "synonyms",
+          "value": "ice creams",
+          "synonyms": []
+        },
+        {
+          "type": "synonyms",
+          "value": "item",
+          "synonyms": [
+            "biryani",
+            "chicken biryani",
+            "dosa",
+            "icecream",
+            "paneer masala",
+            "veg biryani",
+            "veg meals"
+          ]
+        },
+        {
+          "type": "synonyms",
+          "value": "paneer masala",
+          "synonyms": []
+        },
+        {
+          "type": "synonyms",
+          "value": "pomphret fry",
+          "synonyms": []
+        },
+        {
+          "type": "synonyms",
+          "value": "shezwan chicken",
+          "synonyms": []
+        },
+        {
+          "type": "synonyms",
+          "value": "veg noodles",
+          "synonyms": []
+        }
+      ],
+      "fuzzy_match": true
+    },
+    {
+      "entity": "number",
+      "values": [
+        {
+          "type": "patterns",
+          "value": "number",
+          "patterns": [
+            "1-100"
+          ]
+        }
+      ],
+      "fuzzy_match": true
+    },
+    {
+      "entity": "offer",
+      "values": [],
+      "fuzzy_match": true
+    },
+    {
+      "entity": "order",
+      "values": [
+        {
+          "type": "synonyms",
+          "value": "order",
+          "synonyms": [
+            "BUY",
+            "ORDER",
+            "PURCHASE"
+          ]
+        }
+      ],
+      "fuzzy_match": true
+    },
+    {
+      "entity": "payment",
+      "values": [
+        {
+          "type": "synonyms",
+          "value": "card",
+          "synonyms": [
+            "debit card,credit card"
+          ]
+        },
+        {
+          "type": "synonyms",
+          "value": "COD",
+          "synonyms": [
+            "cash on delivery"
+          ]
+        },
+        {
+          "type": "synonyms",
+          "value": "payment",
+          "synonyms": [
+            "card",
+            "cod",
+            "upi"
+          ]
+        },
+        {
+          "type": "synonyms",
+          "value": "UPI",
+          "synonyms": []
+        }
+      ],
+      "fuzzy_match": true
+    },
+    {
+      "entity": "reservation",
+      "values": [
+        {
+          "type": "synonyms",
+          "value": "reserve seat",
+          "synonyms": []
+        }
+      ],
+      "fuzzy_match": true
+    },
+    {
+      "entity": "SPECIALS",
+      "values": [
+        {
+          "type": "synonyms",
+          "value": "BUTTER CHICKEN",
+          "synonyms": [
+            "BUTTER CHICKEN MASALA"
+          ]
+        },
+        {
+          "type": "synonyms",
+          "value": "POMPHRET FRY",
+          "synonyms": [
+            "FISH FRY"
+          ]
+        },
+        {
+          "type": "synonyms",
+          "value": "SCHEZWAN CHICKEN",
+          "synonyms": [
+            "SHEZWAN"
+          ]
+        }
+      ],
+      "fuzzy_match": true
+    },
+    {
+      "entity": "sys-currency",
+      "values": [],
+      "fuzzy_match": true
+    },
+    {
+      "entity": "sys-date",
+      "values": [],
+      "fuzzy_match": true
+    },
+    {
+      "entity": "sys-number",
+      "values": [],
+      "fuzzy_match": true
+    },
+    {
+      "entity": "sys-percentage",
+      "values": [],
+      "fuzzy_match": true
+    },
+    {
+      "entity": "sys-time",
+      "values": [],
+      "fuzzy_match": true
+    }
+  ],
+  "metadata": {
+    "api_version": {
+      "major_version": "v2",
+      "minor_version": "2018-11-08"
+    }
+  },
+  "dialog_nodes": [
+    {
+      "type": "standard",
+      "title": "greeting",
+      "metadata": {
+        "_customization": {
+          "mcr": true
+        }
+      },
+      "conditions": "@greetings || #Greetings",
+      "dialog_node": "Anything else",
+      "previous_sibling": "Welcome",
+      "disambiguation_opt_out": true
+    },
+    {
+      "type": "event_handler",
+      "parent": "slot_3_1602420005845",
+      "event_name": "input",
+      "dialog_node": "handler_10_1602420006064"
+    },
+    {
+      "type": "event_handler",
+      "parent": "node_7_1602423297973",
+      "event_name": "focus",
+      "dialog_node": "handler_1_1602423640799",
+      "previous_sibling": "node_4_1602426311133"
+    },
+    {
+      "type": "event_handler",
+      "output": {
+        "text": {
+          "values": [
+            "We accept CARD,COD,and UPI payment. Which mode you prefer?"
+          ],
+          "selection_policy": "sequential"
+        }
+      },
+      "parent": "slot_6_1602424872312",
+      "event_name": "focus",
+      "dialog_node": "handler_1_1602424872328",
+      "previous_sibling": "handler_2_1602424872328"
+    },
+    {
+      "type": "event_handler",
+      "output": {},
+      "parent": "slot_4_1602423642239",
+      "context": {
+        "items": "@items"
+      },
+      "conditions": "@items",
+      "event_name": "input",
+      "dialog_node": "handler_2_1602423642299"
+    },
+    {
+      "type": "event_handler",
+      "output": {},
+      "parent": "slot_6_1602424872312",
+      "context": {
+        "payment": "@payment"
+      },
+      "conditions": "@payment",
+      "event_name": "input",
+      "dialog_node": "handler_2_1602424872328"
+    },
+    {
+      "type": "event_handler",
+      "output": {},
+      "parent": "slot_3_1602420005845",
+      "event_name": "focus",
+      "dialog_node": "handler_3_1602420006064",
+      "previous_sibling": "handler_10_1602420006064"
+    },
+    {
+      "type": "event_handler",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Please name the items you want to order OR  revisit main page to decide."
+              },
+              {
+                "text": ""
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          },
+          {
+            "title": "MAIN PAGE",
+            "options": [
+              {
+                "label": "MENU",
+                "value": {
+                  "input": {
+                    "text": "MENU"
+                  }
+                }
+              },
+              {
+                "label": "SPECIAL ITEM",
+                "value": {
+                  "input": {
+                    "text": "SPECIAL ITEM"
+                  }
+                }
+              },
+              {
+                "label": "OFFERS",
+                "value": {
+                  "input": {
+                    "text": "OFFERS"
+                  }
+                }
+              }
+            ],
+            "description": "",
+            "response_type": "option"
+          }
+        ]
+      },
+      "parent": "slot_4_1602423642239",
+      "event_name": "focus",
+      "dialog_node": "handler_6_1602423642299",
+      "previous_sibling": "handler_2_1602423642299"
+    },
+    {
+      "type": "event_handler",
+      "output": {},
+      "parent": "slot_10_1602424695425",
+      "context": {
+        "number": "@sys-number"
+      },
+      "conditions": "@sys-number",
+      "event_name": "input",
+      "dialog_node": "handler_8_1602424695442"
+    },
+    {
+      "type": "event_handler",
+      "output": {
+        "text": {
+          "values": [
+            "How much quantity you want?"
+          ],
+          "selection_policy": "sequential"
+        }
+      },
+      "parent": "slot_10_1602424695425",
+      "event_name": "focus",
+      "dialog_node": "handler_9_1602424695442",
+      "previous_sibling": "handler_8_1602424695442"
+    },
+    {
+      "type": "standard",
+      "title": "anything else",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "I didn't understand. You can try rephrasing."
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          },
+          {
+            "values": [],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "conditions": "anything_else",
+      "digress_in": "does_not_return",
+      "dialog_node": "node_1_1601827299265",
+      "previous_sibling": "node_7_1602423297973"
+    },
+    {
+      "type": "standard",
+      "title": "Mail id",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Heartily welcome you once again to PARADISE restaurant.  \nPlease go through the below options and make a selection. It will help you with our menu, today's specials, offers and order placements. Your mail id  $email  will be used for further references. \nHave a nice time!. Thank You:)"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          },
+          {
+            "title": "",
+            "options": [
+              {
+                "label": "Menu",
+                "value": {
+                  "input": {
+                    "text": "Menu"
+                  }
+                }
+              },
+              {
+                "label": "Special items",
+                "value": {
+                  "input": {
+                    "text": "Special items"
+                  }
+                }
+              },
+              {
+                "label": "Offers",
+                "value": {
+                  "input": {
+                    "text": "Offers"
+                  }
+                }
+              },
+              {
+                "label": "Order",
+                "value": {
+                  "input": {
+                    "text": "Order"
+                  }
+                }
+              }
+            ],
+            "description": "",
+            "response_type": "option"
+          }
+        ]
+      },
+      "parent": "Welcome",
+      "context": {
+        "email": "@email.literal"
+      },
+      "conditions": "@email",
+      "dialog_node": "node_1_1602427356965"
+    },
+    {
+      "type": "standard",
+      "title": "enquiry",
+      "metadata": {
+        "_customization": {
+          "mcr": true
+        }
+      },
+      "conditions": "#enquiry || @enquiry",
+      "digress_in": "returns",
+      "dialog_node": "node_2_1602419968237",
+      "digress_out": "allow_all",
+      "previous_sibling": "Anything else"
+    },
+    {
+      "type": "standard",
+      "title": "Deleting Context",
+      "output": {
+        "deleted": "<?context.remove('items')?><?context.remove('number')?><?context.remove('payments')?><?context.remove('email')?>",
+        "generic": [
+          {
+            "values": [],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          },
+          {
+            "values": [],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "parent": "node_7_1602423297973",
+      "conditions": "true",
+      "dialog_node": "node_4_1602426311133"
+    },
+    {
+      "type": "frame",
+      "title": "ORDER",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Thank you. Your Order of $number  $items is placed. Please pay using  $payment . Your receipt will be sent to your $email ."
+              },
+              {
+                "text": ""
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          },
+          {
+            "values": [],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "conditions": "@order && @order:order",
+      "digress_in": "returns",
+      "dialog_node": "node_7_1602423297973",
+      "digress_out": "allow_all",
+      "previous_sibling": "node_2_1602419968237",
+      "digress_out_slots": "allow_returning"
+    },
+    {
+      "type": "standard",
+      "title": "specials",
+      "parent": "node_2_1602419968237",
+      "metadata": {
+        "_customization": {
+          "mcr": true
+        }
+      },
+      "conditions": "@SPECIALS",
+      "dialog_node": "node_8_1602421949749"
+    },
+    {
+      "type": "response_condition",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "We offer 20% off on vegetarian dishes"
+              },
+              {
+                "text": "text response\n"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          },
+          {
+            "values": [
+              {
+                "text": "we offer 10% discount on desserts"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          },
+          {
+            "values": [
+              {
+                "text": "we offer one to one offer on beverages."
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          },
+          {
+            "title": "Order please if choice made",
+            "options": [
+              {
+                "label": "order",
+                "value": {
+                  "input": {
+                    "text": "order"
+                  }
+                }
+              }
+            ],
+            "response_type": "option"
+          }
+        ]
+      },
+      "parent": "node_2_1602419968237",
+      "conditions": "@enquiry:offers",
+      "dialog_node": "response_10_1602420884607",
+      "previous_sibling": "response_6_1602420059197"
+    },
+    {
+      "type": "response_condition",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "It costs Rs 350/ per plate"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          },
+          {
+            "values": [
+              {
+                "text": "Proceed to order if your choice is made."
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          },
+          {
+            "title": "place your order here",
+            "options": [
+              {
+                "label": "ORDER",
+                "value": {
+                  "input": {
+                    "text": "ORDER"
+                  }
+                }
+              }
+            ],
+            "response_type": "option"
+          }
+        ]
+      },
+      "parent": "node_8_1602421949749",
+      "conditions": "@SPECIALS:(POMPHRET FRY)",
+      "dialog_node": "response_10_1602422382623",
+      "previous_sibling": "response_7_1602422189155"
+    },
+    {
+      "type": "response_condition",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Hey hello, have a nice day!"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "parent": "Anything else",
+      "conditions": "anything_else",
+      "dialog_node": "response_3_1601827174282",
+      "previous_sibling": "response_5_1601827042641"
+    },
+    {
+      "type": "response_condition",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "good morning"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "parent": "Anything else",
+      "conditions": "@greetings:(good morning)",
+      "dialog_node": "response_5_1601827042641",
+      "previous_sibling": "response_8_1601826805424"
+    },
+    {
+      "type": "response_condition",
+      "output": {
+        "generic": [
+          {
+            "title": "TODAYS SPECIALS ARE ",
+            "options": [
+              {
+                "label": "Schezwan chicken",
+                "value": {
+                  "input": {
+                    "text": "Schezwan chicken"
+                  }
+                }
+              },
+              {
+                "label": "BUTTER CHICKEN",
+                "value": {
+                  "input": {
+                    "text": "BUTTER CHICKEN"
+                  }
+                }
+              },
+              {
+                "label": "POMPHRET FRY",
+                "value": {
+                  "input": {
+                    "text": "POMPHRET FRY"
+                  }
+                }
+              }
+            ],
+            "description": "",
+            "response_type": "option"
+          },
+          {
+            "values": [
+              {
+                "text": "Choose a special item or go back to main page"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          },
+          {
+            "title": "MAIN PAGE",
+            "options": [
+              {
+                "label": "ORDER",
+                "value": {
+                  "input": {
+                    "text": "ORDER"
+                  }
+                }
+              },
+              {
+                "label": "MENU",
+                "value": {
+                  "input": {
+                    "text": "MENU"
+                  }
+                }
+              },
+              {
+                "label": "OFFERS",
+                "value": {
+                  "input": {
+                    "text": "OFFERS"
+                  }
+                }
+              }
+            ],
+            "description": "MAKE YOUR CHOICE",
+            "response_type": "option"
+          }
+        ]
+      },
+      "parent": "node_2_1602419968237",
+      "conditions": "@enquiry:(special items)",
+      "dialog_node": "response_5_1602421058455",
+      "previous_sibling": "response_10_1602420884607"
+    },
+    {
+      "type": "response_condition",
+      "output": {
+        "generic": [
+          {
+            "title": "PARADISE RESTAURANT DELIVERY MENU",
+            "source": "https://www.paradisefoodcourt.in/images/menu/chennai/porur/Delivery-Flyers-omr-Porur.jpg",
+            "response_type": "image"
+          },
+          {
+            "title": "EXPRESS MENU-DESSERTS,BEVERAGES",
+            "source": "https://www.paradisefoodcourt.in/images/menu/chennai/katupakka/Express-Menu-Katupakkam.jpg",
+            "response_type": "image"
+          },
+          {
+            "title": "Choose any from the below list",
+            "options": [
+              {
+                "label": "Offers",
+                "value": {
+                  "input": {
+                    "text": "offers"
+                  }
+                }
+              },
+              {
+                "label": "special items",
+                "value": {
+                  "input": {
+                    "text": "special items"
+                  }
+                }
+              },
+              {
+                "label": "order",
+                "value": {
+                  "input": {
+                    "text": "order"
+                  }
+                }
+              }
+            ],
+            "response_type": "option"
+          }
+        ]
+      },
+      "parent": "node_2_1602419968237",
+      "conditions": "@enquiry:menu",
+      "dialog_node": "response_6_1602420059197",
+      "previous_sibling": "node_8_1602421949749"
+    },
+    {
+      "type": "response_condition",
+      "output": {
+        "generic": [
+          {
+            "title": "reserve seats",
+            "options": [],
+            "description": "reserve seats",
+            "response_type": "option"
+          }
+        ]
+      },
+      "parent": "node_2_1602419968237",
+      "conditions": "@enquiry:reservation",
+      "dialog_node": "response_6_1602689061977",
+      "previous_sibling": "response_5_1602421058455"
+    },
+    {
+      "type": "response_condition",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "good evening"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "parent": "Anything else",
+      "conditions": "@greetings:(good evening)",
+      "dialog_node": "response_7_1601826683478"
+    },
+    {
+      "type": "response_condition",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "It costs Rs 250/ per plate"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          },
+          {
+            "values": [
+              {
+                "text": "Proceed to order if your choice is made."
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          },
+          {
+            "title": "please order here",
+            "options": [
+              {
+                "label": "ORDER",
+                "value": {
+                  "input": {
+                    "text": "ORDER"
+                  }
+                }
+              }
+            ],
+            "response_type": "option"
+          }
+        ]
+      },
+      "parent": "node_8_1602421949749",
+      "conditions": "@SPECIALS:(BUTTER CHICKEN)",
+      "dialog_node": "response_7_1602422189155",
+      "previous_sibling": "response_8_1602422115673"
+    },
+    {
+      "type": "response_condition",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "good afternoon"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "parent": "Anything else",
+      "conditions": "@greetings:(good afternoon)",
+      "dialog_node": "response_8_1601826805424",
+      "previous_sibling": "response_7_1601826683478"
+    },
+    {
+      "type": "response_condition",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Prize is Rs 200 per plate"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          },
+          {
+            "values": [
+              {
+                "text": "Proceed to order if your choice is made."
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          },
+          {
+            "title": "please place your order",
+            "options": [
+              {
+                "label": "ORDER",
+                "value": {
+                  "input": {
+                    "text": "ORDER"
+                  }
+                }
+              }
+            ],
+            "response_type": "option"
+          }
+        ]
+      },
+      "parent": "node_8_1602421949749",
+      "conditions": "@SPECIALS:(SCHEZWAN CHICKEN)",
+      "dialog_node": "response_8_1602422115673"
+    },
+    {
+      "type": "slot",
+      "parent": "node_7_1602423297973",
+      "variable": "$number",
+      "dialog_node": "slot_10_1602424695425",
+      "previous_sibling": "slot_4_1602423642239"
+    },
+    {
+      "type": "slot",
+      "parent": "node_2_1602419968237",
+      "dialog_node": "slot_3_1602420005845",
+      "previous_sibling": "response_6_1602689061977"
+    },
+    {
+      "type": "slot",
+      "output": {},
+      "parent": "node_7_1602423297973",
+      "variable": "$items",
+      "dialog_node": "slot_4_1602423642239",
+      "previous_sibling": "handler_1_1602423640799"
+    },
+    {
+      "type": "slot",
+      "parent": "node_7_1602423297973",
+      "variable": "$payment",
+      "dialog_node": "slot_6_1602424872312",
+      "previous_sibling": "slot_10_1602424695425"
+    },
+    {
+      "type": "standard",
+      "title": "Welcome ",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Sir/Madam,\nWelcome to PARADISE restaurant. \nI am a smart restaurant bot capable of assisting you with  menu, offers, special items & order placements. \nCould you please give your name and mail id ?"
+              },
+              {
+                "text": ""
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          },
+          {
+            "values": [],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "conditions": "welcome || @email",
+      "dialog_node": "Welcome"
+    }
+  ],
+  "counterexamples": [],
+  "system_settings": {
+    "off_topic": {
+      "enabled": true
+    },
+    "disambiguation": {
+      "prompt": "Did you mean:",
+      "enabled": true,
+      "randomize": true,
+      "max_suggestions": 5,
+      "suggestion_text_policy": "title",
+      "none_of_the_above_prompt": "None of the above"
+    },
+    "system_entities": {
+      "enabled": true
+    },
+    "human_agent_assist": {
+      "prompt": "Did you mean:"
+    },
+    "spelling_auto_correct": true
+  },
+  "learning_opt_out": false,
+  "name": "SmartRestbot",
+  "language": "en",
+  "description": "Capable of assisting customers with query and placing orders"
+}
